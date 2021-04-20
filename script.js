@@ -102,6 +102,13 @@ function getLatLng() {
                 position: { lat: lat, lng: lng},
                 map: map,
             });
+
+            google.maps.event.addDomListener(window, "resize", function() {
+                var center = map.getCenter();
+                google.maps.event.trigger(map, "resize");
+                map.setCenter(center);
+            });
+
             getCovidData(results[0].formatted_address) 
             getFourSquareData();   
         }

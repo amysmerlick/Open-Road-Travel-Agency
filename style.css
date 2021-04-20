@@ -151,6 +151,22 @@ form a {
     margin: auto;
 }
 
+#map {     /* Full screen */
+    height: 100%;
+    min-height: 400px;
+    width: 100%;
+    max-width: 970px;
+    margin: auto;
+    /* margin-left: 5px; */
+  }
+  
+  @media only screen and (max-width: 1281px) {    /* Smaller width screen */
+    #map {
+      width: 480px;
+    }
+  }
+
+
 #covid-data-message,
 #covid-message2 {
     /* flex: 1 1 auto; */
